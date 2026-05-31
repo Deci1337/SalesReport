@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>5</Id>
+  <Name>Смартфоны Апрель</Name>
+  <PeriodStart>2025-04-01T00:00:00</PeriodStart>
+  <PeriodEnd>2025-04-30T00:00:00</PeriodEnd>
+  <Products>
+    <ITProduct xsi:type="Smartphone">
+      <Id>8</Id>
+      <Article>SM-003</Article>
+      <Brand>Apple</Brand>
+      <ModelName>iPhone 15</ModelName>
+      <SaleDate>2025-04-01T00:00:00</SaleDate>
+      <BasePrice>80000</BasePrice>
+      <CameraMP>48</CameraMP>
+      <BatteryMah>3877</BatteryMah>
+    </ITProduct>
+    <ITProduct xsi:type="Smartphone">
+      <Id>9</Id>
+      <Article>SM-004</Article>
+      <Brand>Realme</Brand>
+      <ModelName>C65</ModelName>
+      <SaleDate>2025-04-10T00:00:00</SaleDate>
+      <BasePrice>10000</BasePrice>
+      <CameraMP>50</CameraMP>
+      <BatteryMah>5000</BatteryMah>
+    </ITProduct>
+  </Products>
+</Report>

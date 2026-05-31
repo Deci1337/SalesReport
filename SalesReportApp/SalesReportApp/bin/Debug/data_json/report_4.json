@@ -1,0 +1,36 @@
+{
+  "$type": "Model.Core.Report, Model",
+  "Id": 4,
+  "Name": "Ноутбуки Апрель",
+  "PeriodStart": "2025-04-01T00:00:00",
+  "PeriodEnd": "2025-04-30T00:00:00",
+  "Products": {
+    "$type": "System.Collections.Generic.List`1[[Model.Core.ITProduct, Model]], mscorlib",
+    "$values": [
+      {
+        "$type": "Model.Core.Laptop, Model",
+        "RamGb": 8,
+        "StorageGb": 256,
+        "Price": 29728.0,
+        "Id": 3,
+        "Article": "LT-003",
+        "Brand": "HP",
+        "ModelName": "Pavilion 15",
+        "SaleDate": "2025-04-02T00:00:00",
+        "BasePrice": 28000.0
+      },
+      {
+        "$type": "Model.Core.Laptop, Model",
+        "RamGb": 8,
+        "StorageGb": 256,
+        "Price": 26728.0,
+        "Id": 4,
+        "Article": "LT-004",
+        "Brand": "Acer",
+        "ModelName": "Aspire 5",
+        "SaleDate": "2025-04-15T00:00:00",
+        "BasePrice": 25000.0
+      }
+    ]
+  }
+}

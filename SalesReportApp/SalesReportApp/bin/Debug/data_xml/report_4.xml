@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>4</Id>
+  <Name>Ноутбуки Апрель</Name>
+  <PeriodStart>2025-04-01T00:00:00</PeriodStart>
+  <PeriodEnd>2025-04-30T00:00:00</PeriodEnd>
+  <Products>
+    <ITProduct xsi:type="Laptop">
+      <Id>3</Id>
+      <Article>LT-003</Article>
+      <Brand>HP</Brand>
+      <ModelName>Pavilion 15</ModelName>
+      <SaleDate>2025-04-02T00:00:00</SaleDate>
+      <BasePrice>28000</BasePrice>
+      <RamGb>8</RamGb>
+      <StorageGb>256</StorageGb>
+    </ITProduct>
+    <ITProduct xsi:type="Laptop">
+      <Id>4</Id>
+      <Article>LT-004</Article>
+      <Brand>Acer</Brand>
+      <ModelName>Aspire 5</ModelName>
+      <SaleDate>2025-04-15T00:00:00</SaleDate>
+      <BasePrice>25000</BasePrice>
+      <RamGb>8</RamGb>
+      <StorageGb>256</StorageGb>
+    </ITProduct>
+  </Products>
+</Report>

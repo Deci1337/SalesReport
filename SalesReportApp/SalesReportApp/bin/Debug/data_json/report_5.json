@@ -1,0 +1,36 @@
+{
+  "$type": "Model.Core.Report, Model",
+  "Id": 5,
+  "Name": "Смартфоны Апрель",
+  "PeriodStart": "2025-04-01T00:00:00",
+  "PeriodEnd": "2025-04-30T00:00:00",
+  "Products": {
+    "$type": "System.Collections.Generic.List`1[[Model.Core.ITProduct, Model]], mscorlib",
+    "$values": [
+      {
+        "$type": "Model.Core.Smartphone, Model",
+        "CameraMP": 48,
+        "BatteryMah": 3877,
+        "Price": 82593.85,
+        "Id": 8,
+        "Article": "SM-003",
+        "Brand": "Apple",
+        "ModelName": "iPhone 15",
+        "SaleDate": "2025-04-01T00:00:00",
+        "BasePrice": 80000.0
+      },
+      {
+        "$type": "Model.Core.Smartphone, Model",
+        "CameraMP": 50,
+        "BatteryMah": 5000,
+        "Price": 12750.00,
+        "Id": 9,
+        "Article": "SM-004",
+        "Brand": "Realme",
+        "ModelName": "C65",
+        "SaleDate": "2025-04-10T00:00:00",
+        "BasePrice": 10000.0
+      }
+    ]
+  }
+}

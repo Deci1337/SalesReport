@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>1</Id>
+  <Name>Ноутбуки Март</Name>
+  <PeriodStart>2025-03-01T00:00:00</PeriodStart>
+  <PeriodEnd>2025-03-31T00:00:00</PeriodEnd>
+  <Products>
+    <ITProduct xsi:type="Laptop">
+      <Id>1</Id>
+      <Article>LT-001</Article>
+      <Brand>Asus</Brand>
+      <ModelName>VivoBook 15</ModelName>
+      <SaleDate>2025-03-05T00:00:00</SaleDate>
+      <BasePrice>30000</BasePrice>
+      <RamGb>8</RamGb>
+      <StorageGb>512</StorageGb>
+    </ITProduct>
+    <ITProduct xsi:type="Laptop">
+      <Id>2</Id>
+      <Article>LT-002</Article>
+      <Brand>Lenovo</Brand>
+      <ModelName>IdeaPad 5</ModelName>
+      <SaleDate>2025-03-10T00:00:00</SaleDate>
+      <BasePrice>35000</BasePrice>
+      <RamGb>16</RamGb>
+      <StorageGb>512</StorageGb>
+    </ITProduct>
+  </Products>
+</Report>

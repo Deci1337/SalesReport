@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>6</Id>
+  <Name>Планшеты Апрель</Name>
+  <PeriodStart>2025-04-01T00:00:00</PeriodStart>
+  <PeriodEnd>2025-04-30T00:00:00</PeriodEnd>
+  <Products>
+    <ITProduct xsi:type="Tablet">
+      <Id>13</Id>
+      <Article>TB-003</Article>
+      <Brand>Lenovo</Brand>
+      <ModelName>Tab P12</ModelName>
+      <SaleDate>2025-04-05T00:00:00</SaleDate>
+      <BasePrice>30000</BasePrice>
+      <ScreenInch>12.7</ScreenInch>
+      <HasLTE>false</HasLTE>
+    </ITProduct>
+    <ITProduct xsi:type="Tablet">
+      <Id>14</Id>
+      <Article>TB-004</Article>
+      <Brand>Huawei</Brand>
+      <ModelName>MatePad 11</ModelName>
+      <SaleDate>2025-04-20T00:00:00</SaleDate>
+      <BasePrice>35000</BasePrice>
+      <ScreenInch>11</ScreenInch>
+      <HasLTE>true</HasLTE>
+    </ITProduct>
+  </Products>
+</Report>

@@ -1,0 +1,12 @@
+C:\Users\HONOR\Desktop\SalesReport\SalesReportApp\Model\bin\Debug\net472\Model.dll
+C:\Users\HONOR\Desktop\SalesReport\SalesReportApp\Model\bin\Debug\net472\Model.pdb
+C:\Users\HONOR\Desktop\SalesReport\SalesReportApp\Model\bin\Debug\net472\Newtonsoft.Json.dll
+C:\Users\HONOR\Desktop\SalesReport\SalesReportApp\Model\obj\Debug\net472\Model.csproj.AssemblyReference.cache
+C:\Users\HONOR\Desktop\SalesReport\SalesReportApp\Model\obj\Debug\net472\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HONOR\Desktop\SalesReport\SalesReportApp\Model\obj\Debug\net472\Model.AssemblyInfoInputs.cache
+C:\Users\HONOR\Desktop\SalesReport\SalesReportApp\Model\obj\Debug\net472\Model.AssemblyInfo.cs
+C:\Users\HONOR\Desktop\SalesReport\SalesReportApp\Model\obj\Debug\net472\Model.csproj.CoreCompileInputs.cache
+C:\Users\HONOR\Desktop\SalesReport\SalesReportApp\Model\obj\Debug\net472\Model.sourcelink.json
+C:\Users\HONOR\Desktop\SalesReport\SalesReportApp\Model\obj\Debug\net472\Model.csproj.Up2Date
+C:\Users\HONOR\Desktop\SalesReport\SalesReportApp\Model\obj\Debug\net472\Model.dll
+C:\Users\HONOR\Desktop\SalesReport\SalesReportApp\Model\obj\Debug\net472\Model.pdb

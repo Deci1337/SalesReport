@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>3</Id>
+  <Name>Планшеты Март</Name>
+  <PeriodStart>2025-03-01T00:00:00</PeriodStart>
+  <PeriodEnd>2025-03-31T00:00:00</PeriodEnd>
+  <Products>
+    <ITProduct xsi:type="Tablet">
+      <Id>11</Id>
+      <Article>TB-001</Article>
+      <Brand>Apple</Brand>
+      <ModelName>iPad 10</ModelName>
+      <SaleDate>2025-03-15T00:00:00</SaleDate>
+      <BasePrice>50000</BasePrice>
+      <ScreenInch>10.9</ScreenInch>
+      <HasLTE>false</HasLTE>
+    </ITProduct>
+    <ITProduct xsi:type="Tablet">
+      <Id>12</Id>
+      <Article>TB-002</Article>
+      <Brand>Samsung</Brand>
+      <ModelName>Galaxy Tab A9</ModelName>
+      <SaleDate>2025-03-25T00:00:00</SaleDate>
+      <BasePrice>25000</BasePrice>
+      <ScreenInch>8.7</ScreenInch>
+      <HasLTE>true</HasLTE>
+    </ITProduct>
+  </Products>
+</Report>
