@@ -84,7 +84,7 @@ namespace SalesReportApp
                     CheckBoxItem item = new CheckBoxItem();
                     item.Report = report;
                     item.IsChecked = false;
-                    item.DisplayName = report.Name + " (" + start.ToShortDateString() + " - " + end.ToShortDateString() + ")";
+                    item.DisplayName = report.Name + " (" + report.PeriodStart.ToShortDateString() + " - " + report.PeriodEnd.ToShortDateString() + ")";
                     items.Add(item);
                 }
             }

@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Sales Report" Height="520" Width="420"
         ResizeMode="NoResize">
-    <Grid Margin="20">
+    <Grid Margin="24,20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -16,28 +16,28 @@
 
         <!-- Тип устройства -->
         <StackPanel Grid.Row="0" Margin="0,0,0,10">
-            <Label Content="Тип устройства:" FontWeight="Bold"/>
+            <Label Content="Тип устройства:" FontWeight="SemiBold" Foreground="#1E2D45"/>
             <ComboBox x:Name="cbDeviceType" Height="28"
                       SelectionChanged="cbDeviceType_SelectionChanged"/>
         </StackPanel>
 
         <!-- Период -->
         <StackPanel Grid.Row="1" Margin="0,0,0,10">
-            <Label Content="Период отчёта:" FontWeight="Bold"/>
+            <Label Content="Период отчёта:" FontWeight="SemiBold" Foreground="#1E2D45"/>
             <ComboBox x:Name="cbPeriod" Height="28"
                       SelectionChanged="cbPeriod_SelectionChanged"/>
         </StackPanel>
 
         <!-- Дата -->
         <StackPanel Grid.Row="2" Margin="0,0,0,10">
-            <Label Content="Выберите дату:" FontWeight="Bold"/>
+            <Label Content="Выберите дату:" FontWeight="SemiBold" Foreground="#1E2D45"/>
             <DatePicker x:Name="dpDate" Height="28"
                         SelectedDateChanged="dpDate_SelectedDateChanged"/>
         </StackPanel>
 
         <!-- Список отчётов -->
         <StackPanel Grid.Row="3" Margin="0,0,0,4">
-            <Label Content="Доступные отчёты:" FontWeight="Bold"/>
+            <Label Content="Доступные отчёты:" FontWeight="SemiBold" Foreground="#1E2D45"/>
         </StackPanel>
         <ListBox Grid.Row="4" x:Name="lbReports" Margin="0,0,0,10"
                  SelectionMode="Multiple">
@@ -53,7 +53,7 @@
 
         <!-- Формат файлов -->
         <StackPanel Grid.Row="5" Margin="0,0,0,10">
-            <Label Content="Формат хранения файлов:" FontWeight="Bold"/>
+            <Label Content="Формат хранения файлов:" FontWeight="SemiBold" Foreground="#1E2D45"/>
             <ComboBox x:Name="cbFormat" Height="28"
                       SelectionChanged="cbFormat_SelectionChanged"/>
         </StackPanel>

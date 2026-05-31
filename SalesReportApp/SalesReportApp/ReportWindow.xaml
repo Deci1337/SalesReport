@@ -14,10 +14,10 @@
         <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,8">
             <Label Content="Сортировка:" VerticalAlignment="Center"/>
             <Button x:Name="btnSortAsc" Content="↑ По артикулу"
-                    Width="130" Height="28" Margin="4,0"
+                    Width="140" Margin="4,0"
                     Click="btnSortAsc_Click"/>
             <Button x:Name="btnSortDesc" Content="↓ По артикулу"
-                    Width="130" Height="28" Margin="4,0"
+                    Width="140" Margin="4,0"
                     Click="btnSortDesc_Click"/>
         </StackPanel>
 
@@ -43,7 +43,7 @@
             <ComboBox x:Name="cbArticle" Width="120" Height="28" Margin="4,0"
                       SelectionChanged="cbArticle_SelectionChanged"/>
             <Button x:Name="btnPriceChart" Content="Динамика цены"
-                    Width="130" Height="28" Margin="4,0"
+                    Width="140" Margin="4,0"
                     IsEnabled="False"
                     Click="btnPriceChart_Click"/>
         </StackPanel>
