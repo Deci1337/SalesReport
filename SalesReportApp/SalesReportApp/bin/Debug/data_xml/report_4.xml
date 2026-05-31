@@ -11,7 +11,7 @@
       <Brand>HP</Brand>
       <ModelName>Pavilion 15</ModelName>
       <SaleDate>2025-04-02T00:00:00</SaleDate>
-      <BasePrice>28000</BasePrice>
+      <BasePrice>28000.0</BasePrice>
       <RamGb>8</RamGb>
       <StorageGb>256</StorageGb>
     </ITProduct>
@@ -21,7 +21,7 @@
       <Brand>Acer</Brand>
       <ModelName>Aspire 5</ModelName>
       <SaleDate>2025-04-15T00:00:00</SaleDate>
-      <BasePrice>25000</BasePrice>
+      <BasePrice>25000.0</BasePrice>
       <RamGb>8</RamGb>
       <StorageGb>256</StorageGb>
     </ITProduct>

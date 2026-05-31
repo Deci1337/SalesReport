@@ -98,7 +98,7 @@ namespace Model.Core
         {
             for (int i = 0; i < Products.Count; i++)
             {
-                if (Products[i].Article == p.Article)
+                if (Products[i].Id == p.Id)
                 {
                     return;
                 }

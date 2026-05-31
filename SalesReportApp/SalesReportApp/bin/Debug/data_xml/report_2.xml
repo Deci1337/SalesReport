@@ -11,7 +11,7 @@
       <Brand>Samsung</Brand>
       <ModelName>Galaxy A55</ModelName>
       <SaleDate>2025-03-08T00:00:00</SaleDate>
-      <BasePrice>20000</BasePrice>
+      <BasePrice>20000.0</BasePrice>
       <CameraMP>50</CameraMP>
       <BatteryMah>5000</BatteryMah>
     </ITProduct>
@@ -21,7 +21,7 @@
       <Brand>Xiaomi</Brand>
       <ModelName>Redmi Note 13</ModelName>
       <SaleDate>2025-03-20T00:00:00</SaleDate>
-      <BasePrice>15000</BasePrice>
+      <BasePrice>15000.0</BasePrice>
       <CameraMP>108</CameraMP>
       <BatteryMah>5000</BatteryMah>
     </ITProduct>

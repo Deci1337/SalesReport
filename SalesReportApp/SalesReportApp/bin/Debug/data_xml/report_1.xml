@@ -11,7 +11,7 @@
       <Brand>Asus</Brand>
       <ModelName>VivoBook 15</ModelName>
       <SaleDate>2025-03-05T00:00:00</SaleDate>
-      <BasePrice>30000</BasePrice>
+      <BasePrice>30000.0</BasePrice>
       <RamGb>8</RamGb>
       <StorageGb>512</StorageGb>
     </ITProduct>
@@ -21,7 +21,7 @@
       <Brand>Lenovo</Brand>
       <ModelName>IdeaPad 5</ModelName>
       <SaleDate>2025-03-10T00:00:00</SaleDate>
-      <BasePrice>35000</BasePrice>
+      <BasePrice>35000.0</BasePrice>
       <RamGb>16</RamGb>
       <StorageGb>512</StorageGb>
     </ITProduct>

@@ -11,7 +11,7 @@
       <Brand>Apple</Brand>
       <ModelName>iPad 10</ModelName>
       <SaleDate>2025-03-15T00:00:00</SaleDate>
-      <BasePrice>50000</BasePrice>
+      <BasePrice>50000.0</BasePrice>
       <ScreenInch>10.9</ScreenInch>
       <HasLTE>false</HasLTE>
     </ITProduct>
@@ -21,7 +21,7 @@
       <Brand>Samsung</Brand>
       <ModelName>Galaxy Tab A9</ModelName>
       <SaleDate>2025-03-25T00:00:00</SaleDate>
-      <BasePrice>25000</BasePrice>
+      <BasePrice>25000.0</BasePrice>
       <ScreenInch>8.7</ScreenInch>
       <HasLTE>true</HasLTE>
     </ITProduct>

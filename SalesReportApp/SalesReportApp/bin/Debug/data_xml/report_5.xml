@@ -11,7 +11,7 @@
       <Brand>Apple</Brand>
       <ModelName>iPhone 15</ModelName>
       <SaleDate>2025-04-01T00:00:00</SaleDate>
-      <BasePrice>80000</BasePrice>
+      <BasePrice>80000.0</BasePrice>
       <CameraMP>48</CameraMP>
       <BatteryMah>3877</BatteryMah>
     </ITProduct>
@@ -21,7 +21,7 @@
       <Brand>Realme</Brand>
       <ModelName>C65</ModelName>
       <SaleDate>2025-04-10T00:00:00</SaleDate>
-      <BasePrice>10000</BasePrice>
+      <BasePrice>10000.0</BasePrice>
       <CameraMP>50</CameraMP>
       <BatteryMah>5000</BatteryMah>
     </ITProduct>

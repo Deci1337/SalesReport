@@ -11,7 +11,7 @@
       <Brand>Lenovo</Brand>
       <ModelName>Tab P12</ModelName>
       <SaleDate>2025-04-05T00:00:00</SaleDate>
-      <BasePrice>30000</BasePrice>
+      <BasePrice>30000.0</BasePrice>
       <ScreenInch>12.7</ScreenInch>
       <HasLTE>false</HasLTE>
     </ITProduct>
@@ -21,7 +21,7 @@
       <Brand>Huawei</Brand>
       <ModelName>MatePad 11</ModelName>
       <SaleDate>2025-04-20T00:00:00</SaleDate>
-      <BasePrice>35000</BasePrice>
+      <BasePrice>35000.0</BasePrice>
       <ScreenInch>11</ScreenInch>
       <HasLTE>true</HasLTE>
     </ITProduct>
