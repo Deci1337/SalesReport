@@ -12,19 +12,19 @@ namespace Model.Core
             PeriodEnd = end;
             Products = new List<ITProduct>();
 
-            foreach (Report report in reports)
+            for (int i = 0; i < reports.Count; i++)
             {
-                foreach (ITProduct p in report.Products)
+                List<ITProduct> reportProducts = reports[i].Products;
+                for (int j = 0; j < reportProducts.Count; j++)
                 {
-                    if (p.SaleDate == null)
+                    ITProduct product = reportProducts[j];
+                    if (product.SaleDate.HasValue)
                     {
-                        continue;
+                        if (product.SaleDate.Value >= start && product.SaleDate.Value <= end)
+                        {
+                            AddProduct(product);
+                        }
                     }
-                    if (p.SaleDate.Value < start || p.SaleDate.Value > end)
-                    {
-                        continue;
-                    }
-                    AddProduct(p);
                 }
             }
         }

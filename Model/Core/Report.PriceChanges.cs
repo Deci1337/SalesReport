@@ -7,69 +7,67 @@ namespace Model.Core
     {
         public PricePoint[] GetPriceChanges(string article)
         {
-            List<DateTime> dates = new List<DateTime>();
-            List<decimal> pricesForDate = new List<decimal>();
-            List<int> counts = new List<int>();
-
-            foreach (ITProduct p in Products)
+            List<ITProduct> matched = new List<ITProduct>();
+            for (int i = 0; i < Products.Count; i++)
             {
-                if (p.Article != article)
+                if (Products[i].Article == article && Products[i].SaleDate.HasValue)
                 {
-                    continue;
+                    matched.Add(Products[i]);
                 }
-                if (p.SaleDate == null)
-                {
-                    continue;
-                }
+            }
 
-                DateTime saleDay = p.SaleDate.Value.Date;
-
-                int index = -1;
-                for (int i = 0; i < dates.Count; i++)
+            List<DateTime> dates = new List<DateTime>();
+            for (int i = 0; i < matched.Count; i++)
+            {
+                DateTime date = matched[i].SaleDate.Value.Date;
+                bool found = false;
+                for (int j = 0; j < dates.Count; j++)
                 {
-                    if (dates[i] == saleDay)
+                    if (dates[j] == date)
                     {
-                        index = i;
+                        found = true;
                         break;
                     }
                 }
-
-                if (index == -1)
+                if (!found)
                 {
-                    dates.Add(saleDay);
-                    pricesForDate.Add(p.Price);
-                    counts.Add(1);
-                }
-                else
-                {
-                    pricesForDate[index] = pricesForDate[index] + p.Price;
-                    counts[index] = counts[index] + 1;
+                    dates.Add(date);
                 }
             }
 
-            List<PricePoint> result = new List<PricePoint>();
-            for (int i = 0; i < dates.Count; i++)
+            for (int i = 0; i < dates.Count - 1; i++)
             {
-                PricePoint point = new PricePoint();
-                point.Date = dates[i];
-                point.AvgPrice = pricesForDate[i] / counts[i];
-                result.Add(point);
-            }
-
-            for (int i = 0; i < result.Count - 1; i++)
-            {
-                for (int j = 0; j < result.Count - 1 - i; j++)
+                for (int j = 0; j < dates.Count - 1 - i; j++)
                 {
-                    if (result[j].Date > result[j + 1].Date)
+                    if (dates[j] > dates[j + 1])
                     {
-                        PricePoint temp = result[j];
-                        result[j] = result[j + 1];
-                        result[j + 1] = temp;
+                        DateTime temp = dates[j];
+                        dates[j] = dates[j + 1];
+                        dates[j + 1] = temp;
                     }
                 }
             }
 
-            return result.ToArray();
+            PricePoint[] result = new PricePoint[dates.Count];
+            for (int i = 0; i < dates.Count; i++)
+            {
+                decimal sum = 0;
+                int count = 0;
+                for (int j = 0; j < matched.Count; j++)
+                {
+                    if (matched[j].SaleDate.Value.Date == dates[i])
+                    {
+                        sum += matched[j].Price;
+                        count++;
+                    }
+                }
+                PricePoint point = new PricePoint();
+                point.Date = dates[i];
+                point.AvgPrice = sum / count;
+                result[i] = point;
+            }
+
+            return result;
         }
     }
 }

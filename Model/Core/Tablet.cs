@@ -2,21 +2,11 @@ using System;
 
 namespace Model.Core
 {
+    [Serializable]
     public class Tablet : ITProduct
     {
         public double ScreenInch { get; set; }
         public bool HasLTE { get; set; }
-
-        public Tablet()
-        {
-        }
-
-        public Tablet(int id, string article, string brand, string model, decimal basePrice, DateTime? saleDate, double screenInch, bool hasLTE)
-            : base(id, article, brand, model, basePrice, saleDate)
-        {
-            ScreenInch = screenInch;
-            HasLTE = hasLTE;
-        }
 
         public override decimal Price
         {
@@ -33,12 +23,14 @@ namespace Model.Core
 
         public override string ToString()
         {
-            string lte = "нет";
+            string lte = "WiFi";
             if (HasLTE)
             {
-                lte = "есть";
+                lte = "LTE";
             }
-            return "Tablet: " + Brand + " " + Model + " [" + Article + "] Экран:" + ScreenInch + "\" LTE:" + lte + " Цена:" + Price + " руб.";
+            return "Планшет: " + Brand + " " + ModelName
+                + " " + ScreenInch + "\" " + lte
+                + " Цена:" + Price + " руб.";
         }
     }
 }

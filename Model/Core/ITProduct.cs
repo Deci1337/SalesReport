@@ -3,6 +3,7 @@ using System.Xml.Serialization;
 
 namespace Model.Core
 {
+    [Serializable]
     [XmlInclude(typeof(Laptop))]
     [XmlInclude(typeof(Smartphone))]
     [XmlInclude(typeof(Tablet))]
@@ -11,25 +12,11 @@ namespace Model.Core
         public int Id { get; set; }
         public string Article { get; set; }
         public string Brand { get; set; }
-        public string Model { get; set; }
+        public string ModelName { get; set; }
         public DateTime? SaleDate { get; set; }
         public decimal BasePrice { get; set; }
 
         public abstract decimal Price { get; }
-
-        public ITProduct()
-        {
-        }
-
-        public ITProduct(int id, string article, string brand, string model, decimal basePrice, DateTime? saleDate)
-        {
-            Id = id;
-            Article = article;
-            Brand = brand;
-            Model = model;
-            BasePrice = basePrice;
-            SaleDate = saleDate;
-        }
 
         public static bool operator ==(ITProduct a, ITProduct b)
         {
@@ -46,11 +33,7 @@ namespace Model.Core
 
         public static bool operator !=(ITProduct a, ITProduct b)
         {
-            if (a == b)
-            {
-                return false;
-            }
-            return true;
+            return !(a == b);
         }
 
         public override bool Equals(object obj)
@@ -74,7 +57,7 @@ namespace Model.Core
 
         public override string ToString()
         {
-            return Brand + " " + Model + " [" + Article + "] " + Price + " руб.";
+            return Brand + " " + ModelName + " [" + Article + "]";
         }
     }
 }

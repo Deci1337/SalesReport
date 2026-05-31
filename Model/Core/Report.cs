@@ -1,16 +1,18 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace Model.Core
 {
+    [Serializable]
     public partial class Report : IReportable, IExportable
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public DateTime PeriodStart { get; set; }
         public DateTime PeriodEnd { get; set; }
-        public List<ITProduct> Products { get; private set; }
+        public List<ITProduct> Products { get; set; }
 
         public Report()
         {
@@ -23,30 +25,28 @@ namespace Model.Core
             PeriodStart = start;
             PeriodEnd = end;
             Products = new List<ITProduct>();
-            foreach (ITProduct p in products)
+            for (int i = 0; i < products.Count; i++)
             {
-                AddProduct(p);
+                Products.Add(products[i]);
             }
         }
 
         public void Sort(bool ascending)
         {
-            int count = Products.Count;
-            for (int i = 0; i < count - 1; i++)
+            for (int i = 0; i < Products.Count - 1; i++)
             {
-                for (int j = 0; j < count - 1 - i; j++)
+                for (int j = 0; j < Products.Count - 1 - i; j++)
                 {
-                    int cmp = string.Compare(Products[j].Article, Products[j + 1].Article);
-                    bool needSwap = false;
-                    if (ascending && cmp > 0)
+                    bool shouldSwap = false;
+                    if (ascending)
                     {
-                        needSwap = true;
+                        shouldSwap = string.Compare(Products[j].Article, Products[j + 1].Article) > 0;
                     }
-                    if (!ascending && cmp < 0)
+                    else
                     {
-                        needSwap = true;
+                        shouldSwap = string.Compare(Products[j].Article, Products[j + 1].Article) < 0;
                     }
-                    if (needSwap)
+                    if (shouldSwap)
                     {
                         ITProduct temp = Products[j];
                         Products[j] = Products[j + 1];
@@ -61,17 +61,19 @@ namespace Model.Core
             List<ITProduct> result = new List<ITProduct>();
             if (type == typeof(ITProduct))
             {
-                foreach (ITProduct p in Products)
+                for (int i = 0; i < Products.Count; i++)
                 {
-                    result.Add(p);
+                    ITProduct product = Products[i];
+                    result.Add(product);
                 }
                 return result;
             }
-            foreach (ITProduct p in Products)
+            for (int i = 0; i < Products.Count; i++)
             {
-                if (p.GetType() == type)
+                if (Products[i].GetType() == type)
                 {
-                    result.Add(p);
+                    ITProduct product = Products[i];
+                    result.Add(product);
                 }
             }
             return result;
@@ -82,43 +84,41 @@ namespace Model.Core
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("Отчёт: " + Name);
             sb.AppendLine("Период: " + PeriodStart.ToShortDateString() + " - " + PeriodEnd.ToShortDateString());
-            foreach (ITProduct p in Products)
+            sb.AppendLine("Устройства:");
+            for (int i = 0; i < Products.Count; i++)
             {
-                sb.AppendLine(p.ToString());
+                ITProduct product = Products[i];
+                sb.AppendLine("  " + product.Article + " | " + product.Brand
+                    + " | " + product.ModelName + " | " + product.Price + " руб.");
             }
             return sb.ToString();
         }
 
         public void AddProduct(ITProduct p)
         {
-            bool exists = false;
-            foreach (ITProduct existing in Products)
+            for (int i = 0; i < Products.Count; i++)
             {
-                if (existing == p)
+                if (Products[i].Id == p.Id)
                 {
-                    exists = true;
-                    break;
+                    return;
                 }
             }
-            if (!exists)
-            {
-                Products.Add(p);
-            }
+            Products.Add(p);
         }
 
         public void AddProducts(List<ITProduct> items)
         {
-            foreach (ITProduct p in items)
+            for (int i = 0; i < items.Count; i++)
             {
-                AddProduct(p);
+                AddProduct(items[i]);
             }
         }
 
         public void Merge(Report other)
         {
-            foreach (ITProduct p in other.Products)
+            for (int i = 0; i < other.Products.Count; i++)
             {
-                AddProduct(p);
+                AddProduct(other.Products[i]);
             }
         }
     }
