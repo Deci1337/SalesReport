@@ -44,6 +44,11 @@ namespace SalesReportApp
             cbFormat.SelectedIndex = 0;
         }
 
+        private void cbDeviceType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            UpdateReportList();
+        }
+
         private void cbPeriod_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             UpdateReportList();
@@ -69,10 +74,12 @@ namespace SalesReportApp
             List<CheckBoxItem> items = new List<CheckBoxItem>();
             List<Report> reports = App.Reports;
 
+            Type deviceType = GetSelectedDeviceType();
+
             for (int i = 0; i < reports.Count; i++)
             {
                 Report report = reports[i];
-                if (ReportHasProductsInRange(report, start, end))
+                if (ReportHasProductsInRange(report, start, end, deviceType))
                 {
                     CheckBoxItem item = new CheckBoxItem();
                     item.Report = report;
@@ -87,18 +94,16 @@ namespace SalesReportApp
             btnShowReport.IsEnabled = false;
         }
 
-        private bool ReportHasProductsInRange(Report report, DateTime start, DateTime end)
+        private bool ReportHasProductsInRange(Report report, DateTime start, DateTime end, Type deviceType)
         {
             for (int i = 0; i < report.Products.Count; i++)
             {
-                if (report.Products[i].SaleDate.HasValue)
-                {
-                    DateTime saleDate = report.Products[i].SaleDate.Value;
-                    if (saleDate >= start && saleDate <= end)
-                    {
-                        return true;
-                    }
-                }
+                ITProduct product = report.Products[i];
+                if (!product.SaleDate.HasValue) continue;
+                DateTime saleDate = product.SaleDate.Value;
+                if (saleDate < start || saleDate > end) continue;
+                if (deviceType == typeof(ITProduct)) return true;
+                if (product.GetType() == deviceType) return true;
             }
             return false;
         }

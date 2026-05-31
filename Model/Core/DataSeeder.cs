@@ -41,11 +41,11 @@ namespace Model.Core
 
             // Ноутбуки — 3 модели, каждая продаётся в марте, апреле и мае
             string[] laptopArticles = { "LT-001", "LT-002", "LT-003" };
-            string[] laptopBrands   = { "Asus",   "Lenovo", "HP"     };
-            string[] laptopModels   = { "VivoBook 15", "IdeaPad 5", "Pavilion 15" };
-            decimal[] laptopBase    = { 30000m,  35000m,  28000m };
-            int[] laptopRam         = { 8,  16, 8  };
-            int[] laptopStorage     = { 512, 512, 256 };
+            string[] laptopBrands   = { "HONOR",   "Apple",           "ASUS"          };
+            string[] laptopModels   = { "X16 Plus", "MacBook Air M4", "ROG Zephyrus"  };
+            decimal[] laptopBase    = { 65000m,    110000m,           130000m         };
+            int[] laptopRam         = { 16, 16, 32  };
+            int[] laptopStorage     = { 512, 512, 1024 };
 
             for (int m = 0; m < laptopArticles.Length; m++)
             {
@@ -69,11 +69,11 @@ namespace Model.Core
 
             // Смартфоны — 3 модели, каждая продаётся в марте, апреле и мае
             string[] phoneArticles = { "SM-001", "SM-002", "SM-003" };
-            string[] phoneBrands   = { "Samsung", "Xiaomi", "Apple" };
-            string[] phoneModels   = { "Galaxy A55", "Redmi Note 13", "iPhone 15" };
-            decimal[] phoneBase    = { 20000m, 15000m, 80000m };
-            int[] phoneCam         = { 50, 108, 48 };
-            int[] phoneBat         = { 5000, 5000, 3877 };
+            string[] phoneBrands   = { "Apple",          "Samsung",              "Xiaomi"           };
+            string[] phoneModels   = { "iPhone 17 Pro Max", "Galaxy S25 Ultra", "Redmi 17 Pro"     };
+            decimal[] phoneBase    = { 120000m,          95000m,                 35000m             };
+            int[] phoneCam         = { 48, 200, 108 };
+            int[] phoneBat         = { 4500, 5000, 5500 };
 
             for (int m = 0; m < phoneArticles.Length; m++)
             {
