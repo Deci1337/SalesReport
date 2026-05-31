@@ -2,26 +2,96 @@
 <Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Id>4</Id>
   <Name>Ноутбуки Апрель</Name>
-  <PeriodStart>2025-04-01T00:00:00</PeriodStart>
-  <PeriodEnd>2025-04-30T00:00:00</PeriodEnd>
+  <PeriodStart>2026-04-01T00:00:00</PeriodStart>
+  <PeriodEnd>2026-04-30T00:00:00</PeriodEnd>
   <Products>
     <ITProduct xsi:type="Laptop">
-      <Id>3</Id>
+      <Id>4</Id>
+      <Article>LT-001</Article>
+      <Brand>Asus</Brand>
+      <ModelName>VivoBook 15</ModelName>
+      <SaleDate>2026-04-16T00:00:00</SaleDate>
+      <BasePrice>31347</BasePrice>
+      <RamGb>8</RamGb>
+      <StorageGb>512</StorageGb>
+    </ITProduct>
+    <ITProduct xsi:type="Laptop">
+      <Id>5</Id>
+      <Article>LT-001</Article>
+      <Brand>Asus</Brand>
+      <ModelName>VivoBook 15</ModelName>
+      <SaleDate>2026-04-23T00:00:00</SaleDate>
+      <BasePrice>28042</BasePrice>
+      <RamGb>8</RamGb>
+      <StorageGb>512</StorageGb>
+    </ITProduct>
+    <ITProduct xsi:type="Laptop">
+      <Id>6</Id>
+      <Article>LT-001</Article>
+      <Brand>Asus</Brand>
+      <ModelName>VivoBook 15</ModelName>
+      <SaleDate>2026-04-08T00:00:00</SaleDate>
+      <BasePrice>28407</BasePrice>
+      <RamGb>8</RamGb>
+      <StorageGb>512</StorageGb>
+    </ITProduct>
+    <ITProduct xsi:type="Laptop">
+      <Id>13</Id>
+      <Article>LT-002</Article>
+      <Brand>Lenovo</Brand>
+      <ModelName>IdeaPad 5</ModelName>
+      <SaleDate>2026-04-17T00:00:00</SaleDate>
+      <BasePrice>36897</BasePrice>
+      <RamGb>16</RamGb>
+      <StorageGb>512</StorageGb>
+    </ITProduct>
+    <ITProduct xsi:type="Laptop">
+      <Id>14</Id>
+      <Article>LT-002</Article>
+      <Brand>Lenovo</Brand>
+      <ModelName>IdeaPad 5</ModelName>
+      <SaleDate>2026-04-22T00:00:00</SaleDate>
+      <BasePrice>32264</BasePrice>
+      <RamGb>16</RamGb>
+      <StorageGb>512</StorageGb>
+    </ITProduct>
+    <ITProduct xsi:type="Laptop">
+      <Id>15</Id>
+      <Article>LT-002</Article>
+      <Brand>Lenovo</Brand>
+      <ModelName>IdeaPad 5</ModelName>
+      <SaleDate>2026-04-28T00:00:00</SaleDate>
+      <BasePrice>32886</BasePrice>
+      <RamGb>16</RamGb>
+      <StorageGb>512</StorageGb>
+    </ITProduct>
+    <ITProduct xsi:type="Laptop">
+      <Id>22</Id>
       <Article>LT-003</Article>
       <Brand>HP</Brand>
       <ModelName>Pavilion 15</ModelName>
-      <SaleDate>2025-04-02T00:00:00</SaleDate>
-      <BasePrice>28000.0</BasePrice>
+      <SaleDate>2026-04-01T00:00:00</SaleDate>
+      <BasePrice>25894</BasePrice>
       <RamGb>8</RamGb>
       <StorageGb>256</StorageGb>
     </ITProduct>
     <ITProduct xsi:type="Laptop">
-      <Id>4</Id>
-      <Article>LT-004</Article>
-      <Brand>Acer</Brand>
-      <ModelName>Aspire 5</ModelName>
-      <SaleDate>2025-04-15T00:00:00</SaleDate>
-      <BasePrice>25000.0</BasePrice>
+      <Id>23</Id>
+      <Article>LT-003</Article>
+      <Brand>HP</Brand>
+      <ModelName>Pavilion 15</ModelName>
+      <SaleDate>2026-04-24T00:00:00</SaleDate>
+      <BasePrice>25306</BasePrice>
+      <RamGb>8</RamGb>
+      <StorageGb>256</StorageGb>
+    </ITProduct>
+    <ITProduct xsi:type="Laptop">
+      <Id>24</Id>
+      <Article>LT-003</Article>
+      <Brand>HP</Brand>
+      <ModelName>Pavilion 15</ModelName>
+      <SaleDate>2026-04-04T00:00:00</SaleDate>
+      <BasePrice>28759</BasePrice>
       <RamGb>8</RamGb>
       <StorageGb>256</StorageGb>
     </ITProduct>

@@ -2,28 +2,98 @@
 <Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Id>6</Id>
   <Name>Планшеты Апрель</Name>
-  <PeriodStart>2025-04-01T00:00:00</PeriodStart>
-  <PeriodEnd>2025-04-30T00:00:00</PeriodEnd>
+  <PeriodStart>2026-04-01T00:00:00</PeriodStart>
+  <PeriodEnd>2026-04-30T00:00:00</PeriodEnd>
   <Products>
     <ITProduct xsi:type="Tablet">
-      <Id>13</Id>
+      <Id>58</Id>
+      <Article>TB-001</Article>
+      <Brand>Apple</Brand>
+      <ModelName>iPad 10</ModelName>
+      <SaleDate>2026-04-09T00:00:00</SaleDate>
+      <BasePrice>51075</BasePrice>
+      <ScreenInch>10.9</ScreenInch>
+      <HasLTE>false</HasLTE>
+    </ITProduct>
+    <ITProduct xsi:type="Tablet">
+      <Id>59</Id>
+      <Article>TB-001</Article>
+      <Brand>Apple</Brand>
+      <ModelName>iPad 10</ModelName>
+      <SaleDate>2026-04-30T00:00:00</SaleDate>
+      <BasePrice>50260</BasePrice>
+      <ScreenInch>10.9</ScreenInch>
+      <HasLTE>false</HasLTE>
+    </ITProduct>
+    <ITProduct xsi:type="Tablet">
+      <Id>60</Id>
+      <Article>TB-001</Article>
+      <Brand>Apple</Brand>
+      <ModelName>iPad 10</ModelName>
+      <SaleDate>2026-04-01T00:00:00</SaleDate>
+      <BasePrice>50754</BasePrice>
+      <ScreenInch>10.9</ScreenInch>
+      <HasLTE>false</HasLTE>
+    </ITProduct>
+    <ITProduct xsi:type="Tablet">
+      <Id>67</Id>
+      <Article>TB-002</Article>
+      <Brand>Samsung</Brand>
+      <ModelName>Galaxy Tab A9</ModelName>
+      <SaleDate>2026-04-10T00:00:00</SaleDate>
+      <BasePrice>23030</BasePrice>
+      <ScreenInch>8.7</ScreenInch>
+      <HasLTE>true</HasLTE>
+    </ITProduct>
+    <ITProduct xsi:type="Tablet">
+      <Id>68</Id>
+      <Article>TB-002</Article>
+      <Brand>Samsung</Brand>
+      <ModelName>Galaxy Tab A9</ModelName>
+      <SaleDate>2026-04-23T00:00:00</SaleDate>
+      <BasePrice>24119</BasePrice>
+      <ScreenInch>8.7</ScreenInch>
+      <HasLTE>true</HasLTE>
+    </ITProduct>
+    <ITProduct xsi:type="Tablet">
+      <Id>69</Id>
+      <Article>TB-002</Article>
+      <Brand>Samsung</Brand>
+      <ModelName>Galaxy Tab A9</ModelName>
+      <SaleDate>2026-04-01T00:00:00</SaleDate>
+      <BasePrice>26629</BasePrice>
+      <ScreenInch>8.7</ScreenInch>
+      <HasLTE>true</HasLTE>
+    </ITProduct>
+    <ITProduct xsi:type="Tablet">
+      <Id>76</Id>
       <Article>TB-003</Article>
       <Brand>Lenovo</Brand>
       <ModelName>Tab P12</ModelName>
-      <SaleDate>2025-04-05T00:00:00</SaleDate>
-      <BasePrice>30000.0</BasePrice>
+      <SaleDate>2026-04-01T00:00:00</SaleDate>
+      <BasePrice>28415</BasePrice>
       <ScreenInch>12.7</ScreenInch>
       <HasLTE>false</HasLTE>
     </ITProduct>
     <ITProduct xsi:type="Tablet">
-      <Id>14</Id>
-      <Article>TB-004</Article>
-      <Brand>Huawei</Brand>
-      <ModelName>MatePad 11</ModelName>
-      <SaleDate>2025-04-20T00:00:00</SaleDate>
-      <BasePrice>35000.0</BasePrice>
-      <ScreenInch>11</ScreenInch>
-      <HasLTE>true</HasLTE>
+      <Id>77</Id>
+      <Article>TB-003</Article>
+      <Brand>Lenovo</Brand>
+      <ModelName>Tab P12</ModelName>
+      <SaleDate>2026-04-29T00:00:00</SaleDate>
+      <BasePrice>28654</BasePrice>
+      <ScreenInch>12.7</ScreenInch>
+      <HasLTE>false</HasLTE>
+    </ITProduct>
+    <ITProduct xsi:type="Tablet">
+      <Id>78</Id>
+      <Article>TB-003</Article>
+      <Brand>Lenovo</Brand>
+      <ModelName>Tab P12</ModelName>
+      <SaleDate>2026-04-24T00:00:00</SaleDate>
+      <BasePrice>32438</BasePrice>
+      <ScreenInch>12.7</ScreenInch>
+      <HasLTE>false</HasLTE>
     </ITProduct>
   </Products>
 </Report>

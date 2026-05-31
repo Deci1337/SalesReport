@@ -26,108 +26,102 @@ namespace Model.Core
             return result;
         }
 
+        private static DateTime RandomDate(Random rnd, int year, int month)
+        {
+            int daysInMonth = DateTime.DaysInMonth(year, month);
+            int day = rnd.Next(1, daysInMonth + 1);
+            return new DateTime(year, month, day);
+        }
+
         private static List<ITProduct> CreateProducts()
         {
+            Random rnd = new Random(42);
             List<ITProduct> products = new List<ITProduct>();
+            int id = 1;
 
-            Laptop l1 = new Laptop();
-            l1.Id = 1; l1.Article = "LT-001"; l1.Brand = "Asus"; l1.ModelName = "VivoBook 15";
-            l1.BasePrice = 30000; l1.RamGb = 8; l1.StorageGb = 512;
-            l1.SaleDate = new DateTime(2026, 3, 5);
-            products.Add(l1);
+            // Ноутбуки — 3 модели, каждая продаётся в марте, апреле и мае
+            string[] laptopArticles = { "LT-001", "LT-002", "LT-003" };
+            string[] laptopBrands   = { "Asus",   "Lenovo", "HP"     };
+            string[] laptopModels   = { "VivoBook 15", "IdeaPad 5", "Pavilion 15" };
+            decimal[] laptopBase    = { 30000m,  35000m,  28000m };
+            int[] laptopRam         = { 8,  16, 8  };
+            int[] laptopStorage     = { 512, 512, 256 };
 
-            Laptop l1b = new Laptop();
-            l1b.Id = 16; l1b.Article = "LT-001"; l1b.Brand = "Asus"; l1b.ModelName = "VivoBook 15";
-            l1b.BasePrice = 31000; l1b.RamGb = 8; l1b.StorageGb = 512;
-            l1b.SaleDate = new DateTime(2026, 3, 12);
-            products.Add(l1b);
+            for (int m = 0; m < laptopArticles.Length; m++)
+            {
+                for (int month = 3; month <= 5; month++)
+                {
+                    for (int sale = 0; sale < 3; sale++)
+                    {
+                        Laptop l = new Laptop();
+                        l.Id = id++;
+                        l.Article = laptopArticles[m];
+                        l.Brand = laptopBrands[m];
+                        l.ModelName = laptopModels[m];
+                        l.RamGb = laptopRam[m];
+                        l.StorageGb = laptopStorage[m];
+                        l.BasePrice = laptopBase[m] + rnd.Next(-3000, 3001);
+                        l.SaleDate = RandomDate(rnd, 2026, month);
+                        products.Add(l);
+                    }
+                }
+            }
 
-            Laptop l1c = new Laptop();
-            l1c.Id = 17; l1c.Article = "LT-001"; l1c.Brand = "Asus"; l1c.ModelName = "VivoBook 15";
-            l1c.BasePrice = 29500; l1c.RamGb = 8; l1c.StorageGb = 512;
-            l1c.SaleDate = new DateTime(2026, 3, 20);
-            products.Add(l1c);
+            // Смартфоны — 3 модели, каждая продаётся в марте, апреле и мае
+            string[] phoneArticles = { "SM-001", "SM-002", "SM-003" };
+            string[] phoneBrands   = { "Samsung", "Xiaomi", "Apple" };
+            string[] phoneModels   = { "Galaxy A55", "Redmi Note 13", "iPhone 15" };
+            decimal[] phoneBase    = { 20000m, 15000m, 80000m };
+            int[] phoneCam         = { 50, 108, 48 };
+            int[] phoneBat         = { 5000, 5000, 3877 };
 
-            Laptop l2 = new Laptop();
-            l2.Id = 2; l2.Article = "LT-002"; l2.Brand = "Lenovo"; l2.ModelName = "IdeaPad 5";
-            l2.BasePrice = 35000; l2.RamGb = 16; l2.StorageGb = 512;
-            l2.SaleDate = new DateTime(2026, 3, 10);
-            products.Add(l2);
+            for (int m = 0; m < phoneArticles.Length; m++)
+            {
+                for (int month = 3; month <= 5; month++)
+                {
+                    for (int sale = 0; sale < 3; sale++)
+                    {
+                        Smartphone s = new Smartphone();
+                        s.Id = id++;
+                        s.Article = phoneArticles[m];
+                        s.Brand = phoneBrands[m];
+                        s.ModelName = phoneModels[m];
+                        s.CameraMP = phoneCam[m];
+                        s.BatteryMah = phoneBat[m];
+                        s.BasePrice = phoneBase[m] + rnd.Next(-2000, 2001);
+                        s.SaleDate = RandomDate(rnd, 2026, month);
+                        products.Add(s);
+                    }
+                }
+            }
 
-            Laptop l3 = new Laptop();
-            l3.Id = 3; l3.Article = "LT-003"; l3.Brand = "HP"; l3.ModelName = "Pavilion 15";
-            l3.BasePrice = 28000; l3.RamGb = 8; l3.StorageGb = 256;
-            l3.SaleDate = new DateTime(2026, 4, 2);
-            products.Add(l3);
+            // Планшеты — 3 модели, каждая продаётся в марте, апреле и мае
+            string[] tabArticles = { "TB-001", "TB-002", "TB-003" };
+            string[] tabBrands   = { "Apple", "Samsung", "Lenovo" };
+            string[] tabModels   = { "iPad 10", "Galaxy Tab A9", "Tab P12" };
+            decimal[] tabBase    = { 50000m, 25000m, 30000m };
+            double[] tabScreen   = { 10.9, 8.7, 12.7 };
+            bool[] tabLte        = { false, true, false };
 
-            Laptop l4 = new Laptop();
-            l4.Id = 4; l4.Article = "LT-004"; l4.Brand = "Acer"; l4.ModelName = "Aspire 5";
-            l4.BasePrice = 25000; l4.RamGb = 8; l4.StorageGb = 256;
-            l4.SaleDate = new DateTime(2026, 4, 15);
-            products.Add(l4);
-
-            Laptop l5 = new Laptop();
-            l5.Id = 5; l5.Article = "LT-005"; l5.Brand = "Dell"; l5.ModelName = "Inspiron 15";
-            l5.BasePrice = 40000; l5.RamGb = 16; l5.StorageGb = 1024;
-            products.Add(l5);
-
-            Smartphone s1 = new Smartphone();
-            s1.Id = 6; s1.Article = "SM-001"; s1.Brand = "Samsung"; s1.ModelName = "Galaxy A55";
-            s1.BasePrice = 20000; s1.CameraMP = 50; s1.BatteryMah = 5000;
-            s1.SaleDate = new DateTime(2026, 3, 8);
-            products.Add(s1);
-
-            Smartphone s2 = new Smartphone();
-            s2.Id = 7; s2.Article = "SM-002"; s2.Brand = "Xiaomi"; s2.ModelName = "Redmi Note 13";
-            s2.BasePrice = 15000; s2.CameraMP = 108; s2.BatteryMah = 5000;
-            s2.SaleDate = new DateTime(2026, 3, 20);
-            products.Add(s2);
-
-            Smartphone s3 = new Smartphone();
-            s3.Id = 8; s3.Article = "SM-003"; s3.Brand = "Apple"; s3.ModelName = "iPhone 15";
-            s3.BasePrice = 80000; s3.CameraMP = 48; s3.BatteryMah = 3877;
-            s3.SaleDate = new DateTime(2026, 4, 1);
-            products.Add(s3);
-
-            Smartphone s4 = new Smartphone();
-            s4.Id = 9; s4.Article = "SM-004"; s4.Brand = "Realme"; s4.ModelName = "C65";
-            s4.BasePrice = 10000; s4.CameraMP = 50; s4.BatteryMah = 5000;
-            s4.SaleDate = new DateTime(2026, 4, 10);
-            products.Add(s4);
-
-            Smartphone s5 = new Smartphone();
-            s5.Id = 10; s5.Article = "SM-005"; s5.Brand = "OnePlus"; s5.ModelName = "12R";
-            s5.BasePrice = 45000; s5.CameraMP = 50; s5.BatteryMah = 5500;
-            products.Add(s5);
-
-            Tablet t1 = new Tablet();
-            t1.Id = 11; t1.Article = "TB-001"; t1.Brand = "Apple"; t1.ModelName = "iPad 10";
-            t1.BasePrice = 50000; t1.ScreenInch = 10.9; t1.HasLTE = false;
-            t1.SaleDate = new DateTime(2026, 3, 15);
-            products.Add(t1);
-
-            Tablet t2 = new Tablet();
-            t2.Id = 12; t2.Article = "TB-002"; t2.Brand = "Samsung"; t2.ModelName = "Galaxy Tab A9";
-            t2.BasePrice = 25000; t2.ScreenInch = 8.7; t2.HasLTE = true;
-            t2.SaleDate = new DateTime(2026, 3, 25);
-            products.Add(t2);
-
-            Tablet t3 = new Tablet();
-            t3.Id = 13; t3.Article = "TB-003"; t3.Brand = "Lenovo"; t3.ModelName = "Tab P12";
-            t3.BasePrice = 30000; t3.ScreenInch = 12.7; t3.HasLTE = false;
-            t3.SaleDate = new DateTime(2026, 4, 5);
-            products.Add(t3);
-
-            Tablet t4 = new Tablet();
-            t4.Id = 14; t4.Article = "TB-004"; t4.Brand = "Huawei"; t4.ModelName = "MatePad 11";
-            t4.BasePrice = 35000; t4.ScreenInch = 11.0; t4.HasLTE = true;
-            t4.SaleDate = new DateTime(2026, 4, 20);
-            products.Add(t4);
-
-            Tablet t5 = new Tablet();
-            t5.Id = 15; t5.Article = "TB-005"; t5.Brand = "Xiaomi"; t5.ModelName = "Pad 6";
-            t5.BasePrice = 28000; t5.ScreenInch = 11.0; t5.HasLTE = false;
-            products.Add(t5);
+            for (int m = 0; m < tabArticles.Length; m++)
+            {
+                for (int month = 3; month <= 5; month++)
+                {
+                    for (int sale = 0; sale < 3; sale++)
+                    {
+                        Tablet t = new Tablet();
+                        t.Id = id++;
+                        t.Article = tabArticles[m];
+                        t.Brand = tabBrands[m];
+                        t.ModelName = tabModels[m];
+                        t.ScreenInch = tabScreen[m];
+                        t.HasLTE = tabLte[m];
+                        t.BasePrice = tabBase[m] + rnd.Next(-2500, 2501);
+                        t.SaleDate = RandomDate(rnd, 2026, month);
+                        products.Add(t);
+                    }
+                }
+            }
 
             return products;
         }
@@ -136,93 +130,55 @@ namespace Model.Core
         {
             List<Report> reports = new List<Report>();
 
-            Predicate<ITProduct> isSoldInMarch = delegate(ITProduct p)
+            Predicate<ITProduct> soldInMarch = delegate(ITProduct p)
             {
                 return p.SaleDate.HasValue && p.SaleDate.Value.Month == 3;
             };
-
-            Predicate<ITProduct> isSoldInApril = delegate(ITProduct p)
+            Predicate<ITProduct> soldInApril = delegate(ITProduct p)
             {
                 return p.SaleDate.HasValue && p.SaleDate.Value.Month == 4;
             };
+            Predicate<ITProduct> soldInMay = delegate(ITProduct p)
+            {
+                return p.SaleDate.HasValue && p.SaleDate.Value.Month == 5;
+            };
 
-            List<ITProduct> laptops = Filter<Laptop>(products);
+            List<ITProduct> laptops    = Filter<Laptop>(products);
             List<ITProduct> smartphones = Filter<Smartphone>(products);
-            List<ITProduct> tablets = Filter<Tablet>(products);
+            List<ITProduct> tablets    = Filter<Tablet>(products);
 
-            List<ITProduct> r1Items = new List<ITProduct>();
-            for (int i = 0; i < laptops.Count; i++)
-            {
-                if (isSoldInMarch(laptops[i]))
-                {
-                    r1Items.Add(allLaptops[i]);
-                }
-            }
-            Report r1 = new Report("Ноутбуки Март", new DateTime(2026, 3, 1), new DateTime(2026, 3, 31), r1Items);
-            r1.Id = 1;
-            reports.Add(r1);
+            int reportId = 1;
 
-            List<ITProduct> r2Items = new List<ITProduct>();
-            for (int i = 0; i < smartphones.Count; i++)
-            {
-                if (isSoldInMarch(smartphones[i]))
-                {
-                    r2Items.Add(smartphones[i]);
-                }
-            }
-            Report r2 = new Report("Смартфоны Март", new DateTime(2026, 3, 1), new DateTime(2026, 3, 31), r2Items);
-            r2.Id = 2;
-            reports.Add(r2);
-
-            List<ITProduct> r3Items = new List<ITProduct>();
-            for (int i = 0; i < tablets.Count; i++)
-            {
-                if (isSoldInMarch(tablets[i]))
-                {
-                    r3Items.Add(tablets[i]);
-                }
-            }
-            Report r3 = new Report("Планшеты Март", new DateTime(2026, 3, 1), new DateTime(2026, 3, 31), r3Items);
-            r3.Id = 3;
-            reports.Add(r3);
-
-            List<ITProduct> r4Items = new List<ITProduct>();
-            for (int i = 0; i < laptops.Count; i++)
-            {
-                if (isSoldInApril(laptops[i]))
-                {
-                    r4Items.Add(laptops[i]);
-                }
-            }
-            Report r4 = new Report("Ноутбуки Апрель", new DateTime(2026, 4, 1), new DateTime(2026, 4, 30), r4Items);
-            r4.Id = 4;
-            reports.Add(r4);
-
-            List<ITProduct> r5Items = new List<ITProduct>();
-            for (int i = 0; i < smartphones.Count; i++)
-            {
-                if (isSoldInApril(smartphones[i]))
-                {
-                    r5Items.Add(smartphones[i]);
-                }
-            }
-            Report r5 = new Report("Смартфоны Апрель", new DateTime(2026, 4, 1), new DateTime(2026, 4, 30), r5Items);
-            r5.Id = 5;
-            reports.Add(r5);
-
-            List<ITProduct> r6Items = new List<ITProduct>();
-            for (int i = 0; i < tablets.Count; i++)
-            {
-                if (isSoldInApril(tablets[i]))
-                {
-                    r6Items.Add(tablets[i]);
-                }
-            }
-            Report r6 = new Report("Планшеты Апрель", new DateTime(2026, 4, 1), new DateTime(2026, 4, 30), r6Items);
-            r6.Id = 6;
-            reports.Add(r6);
+            reportId = AddMonthReport(reports, laptops,     soldInMarch, "Ноутбуки Март",      3, reportId);
+            reportId = AddMonthReport(reports, smartphones,  soldInMarch, "Смартфоны Март",     3, reportId);
+            reportId = AddMonthReport(reports, tablets,      soldInMarch, "Планшеты Март",      3, reportId);
+            reportId = AddMonthReport(reports, laptops,     soldInApril, "Ноутбуки Апрель",    4, reportId);
+            reportId = AddMonthReport(reports, smartphones,  soldInApril, "Смартфоны Апрель",  4, reportId);
+            reportId = AddMonthReport(reports, tablets,      soldInApril, "Планшеты Апрель",   4, reportId);
+            reportId = AddMonthReport(reports, laptops,     soldInMay,   "Ноутбуки Май",       5, reportId);
+            reportId = AddMonthReport(reports, smartphones,  soldInMay,   "Смартфоны Май",      5, reportId);
+            reportId = AddMonthReport(reports, tablets,      soldInMay,   "Планшеты Май",       5, reportId);
 
             return reports;
+        }
+
+        private static int AddMonthReport(List<Report> reports, List<ITProduct> source,
+            Predicate<ITProduct> filter, string name, int month, int reportId)
+        {
+            List<ITProduct> items = new List<ITProduct>();
+            for (int i = 0; i < source.Count; i++)
+            {
+                if (filter(source[i]))
+                {
+                    items.Add(source[i]);
+                }
+            }
+            DateTime start = new DateTime(2026, month, 1);
+            DateTime end = new DateTime(2026, month, DateTime.DaysInMonth(2026, month));
+            Report r = new Report(name, start, end, items);
+            r.Id = reportId;
+            reports.Add(r);
+            return reportId + 1;
         }
     }
 }

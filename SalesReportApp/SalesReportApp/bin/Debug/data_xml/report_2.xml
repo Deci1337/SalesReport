@@ -2,28 +2,98 @@
 <Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Id>2</Id>
   <Name>Смартфоны Март</Name>
-  <PeriodStart>2025-03-01T00:00:00</PeriodStart>
-  <PeriodEnd>2025-03-31T00:00:00</PeriodEnd>
+  <PeriodStart>2026-03-01T00:00:00</PeriodStart>
+  <PeriodEnd>2026-03-31T00:00:00</PeriodEnd>
   <Products>
     <ITProduct xsi:type="Smartphone">
-      <Id>6</Id>
+      <Id>28</Id>
       <Article>SM-001</Article>
       <Brand>Samsung</Brand>
       <ModelName>Galaxy A55</ModelName>
-      <SaleDate>2025-03-08T00:00:00</SaleDate>
-      <BasePrice>20000.0</BasePrice>
+      <SaleDate>2026-03-16T00:00:00</SaleDate>
+      <BasePrice>20418</BasePrice>
       <CameraMP>50</CameraMP>
       <BatteryMah>5000</BatteryMah>
     </ITProduct>
     <ITProduct xsi:type="Smartphone">
-      <Id>7</Id>
+      <Id>29</Id>
+      <Article>SM-001</Article>
+      <Brand>Samsung</Brand>
+      <ModelName>Galaxy A55</ModelName>
+      <SaleDate>2026-03-14T00:00:00</SaleDate>
+      <BasePrice>18203</BasePrice>
+      <CameraMP>50</CameraMP>
+      <BatteryMah>5000</BatteryMah>
+    </ITProduct>
+    <ITProduct xsi:type="Smartphone">
+      <Id>30</Id>
+      <Article>SM-001</Article>
+      <Brand>Samsung</Brand>
+      <ModelName>Galaxy A55</ModelName>
+      <SaleDate>2026-03-20T00:00:00</SaleDate>
+      <BasePrice>20827</BasePrice>
+      <CameraMP>50</CameraMP>
+      <BatteryMah>5000</BatteryMah>
+    </ITProduct>
+    <ITProduct xsi:type="Smartphone">
+      <Id>37</Id>
       <Article>SM-002</Article>
       <Brand>Xiaomi</Brand>
       <ModelName>Redmi Note 13</ModelName>
-      <SaleDate>2025-03-20T00:00:00</SaleDate>
-      <BasePrice>15000.0</BasePrice>
+      <SaleDate>2026-03-01T00:00:00</SaleDate>
+      <BasePrice>14998</BasePrice>
       <CameraMP>108</CameraMP>
       <BatteryMah>5000</BatteryMah>
+    </ITProduct>
+    <ITProduct xsi:type="Smartphone">
+      <Id>38</Id>
+      <Article>SM-002</Article>
+      <Brand>Xiaomi</Brand>
+      <ModelName>Redmi Note 13</ModelName>
+      <SaleDate>2026-03-01T00:00:00</SaleDate>
+      <BasePrice>16316</BasePrice>
+      <CameraMP>108</CameraMP>
+      <BatteryMah>5000</BatteryMah>
+    </ITProduct>
+    <ITProduct xsi:type="Smartphone">
+      <Id>39</Id>
+      <Article>SM-002</Article>
+      <Brand>Xiaomi</Brand>
+      <ModelName>Redmi Note 13</ModelName>
+      <SaleDate>2026-03-02T00:00:00</SaleDate>
+      <BasePrice>13012</BasePrice>
+      <CameraMP>108</CameraMP>
+      <BatteryMah>5000</BatteryMah>
+    </ITProduct>
+    <ITProduct xsi:type="Smartphone">
+      <Id>46</Id>
+      <Article>SM-003</Article>
+      <Brand>Apple</Brand>
+      <ModelName>iPhone 15</ModelName>
+      <SaleDate>2026-03-13T00:00:00</SaleDate>
+      <BasePrice>80129</BasePrice>
+      <CameraMP>48</CameraMP>
+      <BatteryMah>3877</BatteryMah>
+    </ITProduct>
+    <ITProduct xsi:type="Smartphone">
+      <Id>47</Id>
+      <Article>SM-003</Article>
+      <Brand>Apple</Brand>
+      <ModelName>iPhone 15</ModelName>
+      <SaleDate>2026-03-29T00:00:00</SaleDate>
+      <BasePrice>79189</BasePrice>
+      <CameraMP>48</CameraMP>
+      <BatteryMah>3877</BatteryMah>
+    </ITProduct>
+    <ITProduct xsi:type="Smartphone">
+      <Id>48</Id>
+      <Article>SM-003</Article>
+      <Brand>Apple</Brand>
+      <ModelName>iPhone 15</ModelName>
+      <SaleDate>2026-03-23T00:00:00</SaleDate>
+      <BasePrice>80347</BasePrice>
+      <CameraMP>48</CameraMP>
+      <BatteryMah>3877</BatteryMah>
     </ITProduct>
   </Products>
 </Report>
