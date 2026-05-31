@@ -44,7 +44,6 @@ namespace SalesReportApp
             double cW = W - PadLeft - PadRight;
             double cH = H - PadTop  - PadBottom;
 
-            // Диапазон цен с отступом 5%
             decimal minP = _points[0].AvgPrice;
             decimal maxP = _points[0].AvgPrice;
             for (int i = 1; i < _points.Length; i++)
